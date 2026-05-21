@@ -98,7 +98,7 @@ Kết quả: Làm cho:
 | 1000px | 960px |
 | 1400px | 1140px |
 
-# A4 — SCSS Basics
+# Câu A4 — SCSS Basics
 
 | Tính năng | Giải thích | Ví dụ |
 |---|---|---|
@@ -126,3 +126,15 @@ npm install -g sass
 ```bash
 sass scss/style.scss style.css
 ```
+
+# Câu B2 — CSS Animations
+
+## Hiệu ứng đã thực hiện
+
+| Hiệu ứng | Mô tả |
+|---|---|
+| Card Hover | Card nổi lên khi hover |
+| Button Hover | Button đổi màu + scale |
+| Image Zoom | Ảnh zoom nhẹ |
+| Spinner | Spinner xoay liên tục |
+| Fade In | Nội dung hiện dần |

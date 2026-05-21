@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.header {
+  background-color: #222;
+  color: white;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.header .nav {
+  display: none;
+}
+.header .hamburger {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.card {
+  background-color: white;
+  padding: 16px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+.card .card-image {
+  width: 100%;
+  border-radius: 12px;
+}
+.card .card-title {
+  margin-top: 16px;
+  font-size: 20px;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.card.featured {
+  border: 2px solid orange;
+}
+
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .header .nav {
+    display: flex;
+    gap: 20px;
+  }
+  .header .hamburger {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,119 @@
+body {
+
+    font-family: $font-primary;
+
+    background-color: $background-color;
+
+    color: $text-color;
+}
+
+.header {
+
+    background-color: $primary-color;
+
+    color: white;
+
+    padding: $spacing-md;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    .logo {
+
+        font-size: 24px;
+
+        font-weight: bold;
+    }
+
+    .nav {
+
+        display: none;
+    }
+
+    .hamburger {
+
+        font-size: 30px;
+
+        cursor: pointer;
+    }
+}
+
+.product-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: $spacing-md;
+}
+
+.card {
+
+    background-color: white;
+
+    padding: $spacing-md;
+
+    border-radius: $border-radius;
+
+    transition: all 0.3s ease;
+
+    .card-image {
+
+        width: 100%;
+
+        border-radius: $border-radius;
+    }
+
+    .card-title {
+
+        margin-top: $spacing-md;
+
+        font-size: 20px;
+    }
+
+    &:hover {
+
+        transform: translateY(-8px);
+
+        @include card-shadow;
+    }
+
+    &.featured {
+
+        border: 2px solid $secondary-color;
+    }
+}
+
+@include respond-to(tablet) {
+
+    .product-grid {
+
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .header {
+
+        .nav {
+
+            display: flex;
+
+            gap: 20px;
+        }
+
+        .hamburger {
+
+            display: none;
+        }
+    }
+}
+
+@include respond-to(desktop) {
+
+    .product-grid {
+
+        grid-template-columns: repeat(4,1fr);
+    }
+}
